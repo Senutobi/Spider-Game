@@ -27,6 +27,11 @@ public class CollectableCount : MonoBehaviour
 
     void UpdateCount()
     {
+        if (Collectable.total == count)
+        {
+            text.text = $"You Win: Your Babies are Saved!";
+            return;
+        }
         text.text = $"Babies: {count} / {Collectable.total} Left";
     }
 }
